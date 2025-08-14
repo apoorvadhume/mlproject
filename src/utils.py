@@ -22,7 +22,7 @@ def save_object(file_path, obj):
     import pickle
     try:
         with open(file_path, 'wb') as file:
-            pickle.dump(obj, file)
+            dill.dump(obj, file)
         logging.info(f"Object saved at {file_path}")
     except Exception as e:
         logging.error(f"Error saving object: {e}")
